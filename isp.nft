@@ -1,0 +1,6 @@
+table inet my_nat {
+        chain my_masquerade {
+        type nat hook postrouting priority srcnat;
+        oifname "ens18" masquerade
+        }
+}
